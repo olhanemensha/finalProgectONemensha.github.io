@@ -6,6 +6,10 @@
         padding: 20px;
         list-style-type: none;
         text-decoration: none;
+        text-align: center;
+    }
+    &__list:hover {
+        text-decoration: none;
     }
     &__link {
         text-align: center;
@@ -16,14 +20,14 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #1c1c1b;
+        color: $textLink;
         text-decoration: none;
     }
     &__add {
         width: 200px;
         margin: 50px auto 0;
         position: relative;
-        border: 1px solid hsla(21, 37%, 15%, 0.3);
+        border: 1px solid $addBorder;
     }
     &__img {
         max-width: 100%;
@@ -40,26 +44,21 @@
         left: 0;
         bottom: 0;
         padding: 6px 20px 6px 10px;
-        background: hsla(21, 37%, 15%, 0.2);
-        color: white;
+        background: $itemBgc;
+        color: $textColor;
     }
     &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    &__prev,
-    &__next {
-        margin: 10px;
-        text-transform: uppercase;
-        font-family: $secondary-fonts-name;
-        text-decoration: none;
+        @include center;
     }
 }
 
 .tabNavList li a.act {
     font-size: 32px;
-    color: yellowgreen;
+    color: $tabActive;
+    text-decoration: none;
+}
+
+.tabNavList li a:hover {
     text-decoration: none;
 }
 
@@ -70,8 +69,6 @@
 
 .tab.act {
     box-sizing: border-box;
-    display: flex;
+    @include center;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 }

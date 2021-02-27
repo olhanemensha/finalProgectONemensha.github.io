@@ -10,19 +10,19 @@
     z-index: 5;
     padding: 20px;
     overflow: auto;
-    @media (max-width: 1200px) {
+    @media (max-width: $xl) {
         width: 70%;
         height: 70%;
     }
-    @media (max-width: 992px) {
+    @media (max-width: $lg) {
         width: 70%;
         height: 70%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
         width: 60%;
         height: 60%;
     }
-    @media (max-width: 576px) {
+    @media (max-width: $sm) {
         width: 40%;
         height: 40%;
     }
@@ -39,7 +39,7 @@
 }
 
 .popup__close:hover .choose__close {
-    fill: yellowgreen;
+    fill: $popupClose;
 }
 
 .popup__opened {
@@ -52,7 +52,7 @@
 #overlay {
     z-index: 4;
     position: fixed;
-    background-color: #000;
+    background-color: $overlay;
     opacity: 0.9;
     width: 100%;
     height: 100%;

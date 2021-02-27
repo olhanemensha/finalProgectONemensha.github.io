@@ -12,10 +12,10 @@ let form = document.querySelectorAll('.block__form');
 form = Array.prototype.slice.call(form, 0);
 let searchName = '';
 console.log(form);
+const clear = document.querySelector('.clear');
 form.forEach(function(item, index) {
     item.addEventListener('submit', function(event) {
         event.preventDefault();
-        const clear = document.querySelector('.clear');
         if (clear !== null) {
             clearSeach(clear);
         }
@@ -25,6 +25,7 @@ form.forEach(function(item, index) {
             if (searchName === '') {
                 input[0].classList.add('error');
                 input[0].placeholder = "Error,enter coctail name"
+                input[0].value = "";
             } else {
                 input[0].classList.remove('error');
                 myAjax('GET', `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchName}`, dataSeach);
@@ -35,6 +36,7 @@ form.forEach(function(item, index) {
                         div.classList.add('block__result');
                         document.querySelector(".block__red").appendChild(div);
                         div.appendChild(h);
+                        input[0].value = "";
                     } else {
                         const div = document.createElement('div');
                         div.classList.add('block__result');
@@ -55,6 +57,7 @@ form.forEach(function(item, index) {
             if (searchName === '') {
                 input[1].classList.add('error');
                 input[1].placeholder = "Error,enter name of ingridient"
+                input[1].value = "";
             } else {
                 input[1].classList.remove('error');
                 myAjax('GET', `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${searchName}`, ingSeach);
@@ -66,6 +69,7 @@ form.forEach(function(item, index) {
                         div.classList.add('block__result');
                         document.querySelector(".block__blue").appendChild(div);
                         div.appendChild(h);
+                        input[1].value = "";
                     } else {
                         const div = document.createElement('div');
                         div.classList.add('block__result');

@@ -6,13 +6,13 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: $burgerBgc;
         -webkit-transition: 0.4s;
         -moz-transition: 0.4s;
         -o-transition: 0.4s;
         transition: 0.4s;
         display: none;
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             display: block;
         }
     }
@@ -45,7 +45,7 @@
         content: ' ';
         height: 33px;
         width: 2px;
-        background-color: #D70126;
+        background-color: $burgerClose;
     }
     
     .burger__close:before {
@@ -57,7 +57,7 @@
     }
     
     .burger__menu:hover {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: $burgerBgcHover;
     }
     
     .burger__lines::before,
@@ -66,7 +66,7 @@
         position: absolute;
         width: 30px;
         height: 3px;
-        background-color: #D70126;
+        background-color: $burgerLines;
         -webkit-transition: 0.4s;
         -moz-transition: 0.4s;
         -o-transition: 0.4s;
@@ -92,9 +92,7 @@
     .menu__bur {
         padding-top: 50px;
         width: 200px;
-        display: flex;
+        @include center;
         flex-direction: column;
-        align-items: center;
-        justify-self: center;
-        background: linear-gradient(to right, #ebb3bc, #CEE8DD);
+        background: linear-gradient(to right, $BurgerMenuGra, $BurgerMenuGrad);
     }

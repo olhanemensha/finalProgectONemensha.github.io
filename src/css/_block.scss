@@ -3,18 +3,22 @@
     &__color {
         padding: 100px 10px 150px;
         box-sizing: border-box;
+        @media (max-width: $md) {
+            padding: 70px 10px 150px;
+        }
+        @media (max-width: $sm) {
+            padding: 50px 10px 150px;
+        }
     }
     &__red {
-        background-color: rgba($color: #DC143C, $alpha: 0.5);
+        background-color: rgba($color: $redBlock, $alpha: 0.5);
     }
     &__blue {
-        background-color: rgba($color: #00BFFF, $alpha: 0.5);
+        background-color: rgba($color: $blueDlock, $alpha: 0.5);
     }
     &__form {
-        display: flex;
+        @include center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
     &__item {
         font-size: 30px;
@@ -23,51 +27,43 @@
         padding-bottom: 50px;
         text-align: center;
         text-transform: uppercase;
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             font-size: 25px;
+            padding-bottom: 40px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: $sm) {
             font-size: 20px;
+            padding-bottom: 30px;
         }
     }
     &__input {
         padding-left: 10px;
-        font-size: 30px;
-        color: white;
+        font-size: 25px;
+        color: $textColor;
         background: transparent;
-        border: 2px solid white;
-        @media (max-width: 768px) {
-            font-size: 20px;
-        }
-        @media (max-width: 576px) {
-            font-size: 14px;
-        }
+        border: 1px solid$borderSeach;
+    }
+    &__input::placeholder {
+        color: $textColor;
     }
     &__input.error {
         border: 2px solid red;
     }
     &__btn {
-        width: 200px;
+        margin-top: 30px;
+        width: 100px;
         background: transparent;
-        color: white;
-        border: none;
+        color: $textColor;
+        border: solid 1px $borderSeach;
         font-size: 30px;
-        @media (max-width: 768px) {
-            font-size: 20px;
-        }
-        @media (max-width: 576px) {
-            font-size: 14px;
-        }
     }
     &__btn:hover {
-        color: rgb(221, 201, 201);
+        color: $btnSeach;
     }
     &__result {
         padding-top: 20px;
-        display: flex;
+        @include center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
     &__link {
         padding: 5px;
@@ -80,12 +76,12 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #1c1c1b;
-        @media (max-width: 768px) {
+        color: $textLink;
+        @media (max-width: $md) {
             font-size: 20px;
         }
-        @media (max-width: 576px) {
-            font-size: 14px;
+        @media (max-width: $sm) {
+            font-size: 18px;
         }
     }
     &__info {
@@ -97,17 +93,17 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #1c1c1b;
-        @media (max-width: 768px) {
+        color: $textLink;
+        @media (max-width: $md) {
             font-size: 20px;
         }
-        @media (max-width: 576px) {
-            font-size: 14px;
+        @media (max-width: $sm) {
+            font-size: 16px;
         }
     }
     &__text {
         font-size: 14px;
         font-family: $secondary-fonts-name;
-        color: #1c1c1b;
+        color: $textLink;
     }
 }

@@ -3,23 +3,21 @@
     &__container {
         padding: 100px;
         max-width: 580px;
-        display: flex;
+        @include center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             padding: 50px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: $sm) {
             padding: 30px;
         }
     }
     &__block {
         padding: 25px 0 25px;
-        border-top: 1px solid #CC0909;
+        border-top: 1px solid $questBorber;
     }
     &__block:last-child {
-        border-bottom: 1px solid #CC0909;
+        border-bottom: 1px solid $questBorber;
     }
     &__cont {
         display: flex;
@@ -61,11 +59,11 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.2em;
-        color: #1c1c1b;
-        @media (max-width: 768px) {
+        color: $textLink;
+        @media (max-width: $md) {
             font-size: 25px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: $sm) {
             font-size: 20px;
         }
     }
@@ -75,11 +73,11 @@
         font-size: 18px;
         font-weight: 300;
         letter-spacing: 0.28em;
-        color: #1c1c1b;
-        @media (max-width: 768px) {
+        color: $textLink;
+        @media (max-width: $md) {
             font-size: 16px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: $sm) {
             font-size: 14px;
         }
     }
@@ -89,12 +87,12 @@
         font-size: 18px;
         font-weight: 300;
         letter-spacing: 0.04em;
-        color: #000000;
+        color: $textLink;
         display: none;
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             font-size: 16px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: $sm) {
             font-size: 14px;
         }
     }
