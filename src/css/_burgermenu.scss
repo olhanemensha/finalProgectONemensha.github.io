@@ -1,0 +1,100 @@
+    .burger__menu {
+        position: fixed;
+        top: 8px;
+        right: 20px;
+        z-index: 30;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+    
+    .burger__open {
+        display: none;
+    }
+    
+    .burger__cl {
+        display: none;
+    }
+    
+    .close__active {
+        display: block;
+        z-index: 6;
+        position: absolute;
+        top: 10px;
+        right: 180px
+    }
+    
+    .burger__close {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .burger__close:before,
+    .burger__close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: #D70126;
+    }
+    
+    .burger__close:before {
+        transform: rotate(45deg);
+    }
+    
+    .burger__close:after {
+        transform: rotate(-45deg);
+    }
+    
+    .burger__menu:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .burger__lines::before,
+    .burger__lines::after,
+    .burger__lines {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #D70126;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+    
+    .burger__lines {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .burger__lines::before {
+        content: '';
+        top: -12px;
+    }
+    
+    .burger__lines::after {
+        content: '';
+        top: 12px;
+    }
+    
+    .menu__bur {
+        padding-top: 50px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        background: linear-gradient(to right, #ebb3bc, #CEE8DD);
+    }

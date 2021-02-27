@@ -1,0 +1,86 @@
+.random {
+    &__container {
+        @include bgCover('../image/grapefruit-slices-background.jpg');
+        height: 1000px;
+        @media (max-width: 576px) {
+            height: 800px;
+        }
+    }
+    &__item {
+        text-align: center;
+        color: white;
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 22px;
+        text-transform: uppercase;
+        padding: 50px 0 50px;
+        letter-spacing: 5px;
+        @media (max-width: 768px) {
+            font-size: 60px;
+        }
+        @media (max-width: 576px) {
+            font-size: 40px;
+        }
+    }
+    &__text {
+        font-family: $secondary-fonts-name;
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 20px;
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__btn {
+        padding: 10px;
+        text-transform: uppercase;
+        border: 2px solid white;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+        @media (max-width: 576px) {
+            font-size: 12px;
+        }
+    }
+    &__img {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__info_item {
+        font-family: $secondary-fonts-name;
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 30px;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__btn:hover {
+        text-decoration: none;
+        color: rgb(233, 146, 16);
+        border: solid 2px rgb(233, 146, 16);
+    }
+}

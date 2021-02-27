@@ -1,0 +1,38 @@
+        .main {
+            @include bgCover('../image/pexels-engin-akyurt-111.jpg');
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &__item {
+                padding-top: 50px;
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 22px;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                @media (max-width: 768px) {
+                    font-size: 60px;
+                }
+                @media (max-width: 576px) {
+                    font-size: 40px;
+                }
+            }
+            &__text {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 5.4px;
+                padding-top: 50px;
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 576px) {
+                    font-size: 14px;
+                }
+            }
+        }

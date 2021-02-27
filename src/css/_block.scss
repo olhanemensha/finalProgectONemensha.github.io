@@ -1,0 +1,113 @@
+.block {
+    @include bgCover('../image/cocktails-3252160_1280.jpg');
+    &__color {
+        padding: 100px 10px 150px;
+        box-sizing: border-box;
+    }
+    &__red {
+        background-color: rgba($color: #DC143C, $alpha: 0.5);
+    }
+    &__blue {
+        background-color: rgba($color: #00BFFF, $alpha: 0.5);
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35px;
+        padding-bottom: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            font-size: 25px;
+        }
+        @media (max-width: 576px) {
+            font-size: 20px;
+        }
+    }
+    &__input {
+        padding-left: 10px;
+        font-size: 30px;
+        color: white;
+        background: transparent;
+        border: 2px solid white;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__input.error {
+        border: 2px solid red;
+    }
+    &__btn {
+        width: 200px;
+        background: transparent;
+        color: white;
+        border: none;
+        font-size: 30px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__btn:hover {
+        color: rgb(221, 201, 201);
+    }
+    &__result {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__link {
+        padding: 5px;
+        text-decoration: none;
+        text-align: center;
+        padding-right: 15px;
+        font-family: $secondary-fonts-name;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #1c1c1b;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__info {
+        padding: 10px;
+        text-align: center;
+        font-family: $secondary-fonts-name;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #1c1c1b;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        font-family: $secondary-fonts-name;
+        color: #1c1c1b;
+    }
+}

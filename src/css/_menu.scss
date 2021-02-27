@@ -1,0 +1,43 @@
+    .header {
+        &__menu {
+            display: flex;
+            justify-content: space-around;
+            background: linear-gradient(to right, #D70126, #CEE8DD, #029BC4);
+        }
+        &__img {
+            width: 60px;
+            height: 60px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    
+    .menu {
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            @media (max-width: 768px) {
+                display: none;
+                position: absolute;
+                right: 0;
+                z-index: 1;
+            }
+        }
+        &__item {
+            padding: 15px;
+        }
+        &__link {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        &__link:hover {
+            color: #029BC4;
+            text-decoration: none;
+        }
+    }

@@ -1,0 +1,17 @@
+.page {
+    background: linear-gradient(to right, #D70126, #CEE8DD, #029BC4);
+    font-family: $default-fonts;
+    font-size: $default-font-size;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    max-width: 1800px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+        background: linear-gradient(to right, #CEE8DD, #029BC4);
+    }
+    @media (max-width: 576px) {
+        background: linear-gradient(to right, #CEE8DD, #029BC4);
+    }
+}
